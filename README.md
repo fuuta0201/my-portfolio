@@ -12,9 +12,9 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 │   ├── assets
-│   │   ├── fonts
-|   |   └── images
-│   └── favicon.ico
+│       ├── fonts
+|       └── images
+│  
 ├── src/
 │   ├── components/
 │   │   ├── home/
