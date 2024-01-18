@@ -1,97 +1,64 @@
 export const info = {
-  baseUrl: "https://astro-portfolio-uzair.vercel.app",
-  name: "Uzair Ahmed",
-  jobDescription: "Web Developer",
-  about: `I'm a software engineer based in Karachi, Pakistan.
-   I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
-   I have been working for 3 year, with a demonstrated history of working in the Computer Software industry. Skilled in Front-end Development.
-   I have 3 years of experience in HTML, CSS, SCSS, JavaScript, Bootstrap, tailwind CSS, StyledComponent, React JS and Next JS. Hence,
-   I have successfully completed several web projects from scratch. 
-   Yet, I learn continuously and never stop exploring new technologies.
-   So, I have also gained knowledge of Node JS, Express JS, Mongo DB, Python,
-   firebase and React Native with time.
+  //baseUrl: "https://astro-portfolio-uzair.vercel.app",
+  name: "佐藤楓太",
+  jobDescription: "フロントエンドエンジニア",
+  about: `高専に在学し、来年度からは専攻科に進学します。研究では生体信号と機械学習を用いたデータ解析を行い、Nuxt.js、Astro.js、WordPress、MicroCMSなどを
+    用いたフロントエンドエンジニアとしても仕事をしています。本ページではAstro.jsのThemeを用いてポートフォリオを作成しました。
   `,
 
   experience: [
     {
-      name: "InterNative Labs, LLC",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "Apr 2022",
-      endDate: "Present",
+      name: "アルバイトとしてのフロントエンド開発",
+      startDate: "2023年2月",
+      endDate: "現在",
       description: [
-        "- Developing screens and UI components for the web application using React and Tailwind.",
-        "- Fixing UI issues and integrating backend APIs with Redux Saga.",
+        "- Docker,pug,scssを用いたWordPressテーマ開発",
+        "- Vue.js,Nuxt3を用いたSSGサイト開発",
+        "- Astro.jsを用いた静的サイト開発"
       ],
     },
 
     {
-      name: "Coupon Approve (Remote)",
-      location: "Amsterdam, North Holland, Netherlands",
-      startDate: "Nov 2020",
-      endDate: "Apr 2022",
+      name: "個人的開発事例",
+      startDate: "2023年10月",
+      endDate: "現在",
       description: [
-        "✓ Developing code in accordance with appropriate design and architectural rules",
-        "✓ Documenting, testing, deployment, maintenance, support of platforms, applications, databases and solutions",
-        "✓ Help and training of other colleagues",
-        "✓ Others tasks connected to the nature of the job",
-        "✓ Code Improvements and Refactoring ",
-        "✓ Best Practices and Rules Maintainer",
-      ],
-    },
-
-    {
-      name: "Interns Pakistan",
-      location: "Pakistan",
-      startDate: "Oct 2020",
-      endDate: "Nov 2020",
-      description: [
-        "An Immersive Internship Program that prepares me for the world's most in-demand career. A six weeks program completely based on learning and challenges.",
-        "The internship track is built by an industry expert that let develop the skills in the areas most important ",
+        "- 自営業で自動車整備を営む友人のホームページをNuxt3,MicroCMSで制作。開発プロジェクトに記載しています。",
       ],
     },
   ],
 
   education: [
     {
-      name: "Pakistan Institute of Professional Science & Technology (PIPS-TECH)",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "2019",
-      endDate: "2022",
+      name: "高専電子制御工学科",
+      startDate: "2019年4月",
+      endDate: "現在",
       description: [
-        "Diploma of Associate Engineering,  Computer Information Technology (CIT)",
+        "- アプリ開発や組み込み、制御工学や電気電子など幅広い分野を学習しました。",
       ],
     },
     {
-      name: "Govt. Degree Boys College Buffer Zone",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "2018",
-      endDate: "2020",
-      description: ["Intermediate, Pre-Engineering"],
-    },
-    {
-      name: "Ghazi Foundation Schools & Colleges",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "2016",
-      endDate: "2018",
-      description: ["Matriculation,  Computer Science"],
+      name: "高専専攻科",
+      startDate: "2024年4月",
+      endDate: "2026年3月卒業予定",
+      description: [
+        "- データサイエンスに関する研究を行う予定です。",
+      ],
     },
   ],
 
-  socialMedia: {
-    facebook: "https://www.facebook.com/profile.php?id=100022899849583",
-    twitter: "https://twitter.com/Uzzii_21",
-    github: "https://github.com/uzzii-21",
-    email: "mailto:uzairahmed@74372gmail.com",
-    linkedin: "https://www.linkedin.com/in/uzzii21/",
-  },
-
   projects: [
     {
-      title: "Astro Portfolio",
+      title: "FREESTYLE 栁屋商会",
       isFeatured: true,
-      thumbnail: "/assets/images/astro-portfolio.png",
-      githubUrl: "https://github.com/uzzii-21/astro-portfolio",
-      liveUrl: "https://astro-portfolio-uzair.vercel.app/",
+      thumbnail: "/assets/images/mv.jpg",
+      url: "http://freestyle-yanagiya.jp",
+      description: "自動車屋のホームページを作成しました。使用技術はNuxt3とMicroCMSです。",
+      tech: [
+        "Nuxt3",
+        "MicroCMS",
+        "Netlify",
+      ],
     },
   ],
 };

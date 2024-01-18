@@ -12,15 +12,16 @@ const Projects = info.projects.map((project) => project);
 <html lang="en">
   <head>
     <MetaHead
-      title={"Projects"}
-      description={"All projects are available in this page."}
+      title={"開発プロジェクト"}
+      description={"私が開発したwebサイトを掲載します。"}
       ogImageUrl={"/assets/images/profile.png"}
     />
   </head>
 
   <body>
     <Layout>
-      <h1 style="line-height: 1.2;">Projects</h1>
+      <h1 style="line-height: 1.2;">開発プロジェクト</h1>
+      <p>開発したWebサイトを掲載します</p>
       <ProjectsWrapper projects={Projects} />
     </Layout>
   </body>

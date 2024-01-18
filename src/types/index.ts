@@ -25,9 +25,11 @@ export interface IProject {
   title: string;
   isFeatured: boolean;
   thumbnail: string;
-  githubUrl: string;
-  liveUrl: string;
+  url: string;
+  description: string;
+  tech: string[];
 }
+
 export interface IProjects {
   projects: IProject[];
 }
