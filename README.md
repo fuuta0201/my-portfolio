@@ -1,10 +1,8 @@
-# Portfolio Website - Astro
+# Portfolio
 
-Just change `src/data/info.ts` to get your personal portfolio.
+## Overview
 
-## portfolio template for Developers!
-
-![Feature Image](./public/assets/images/astro-portfolio.png)
+成果物や習得技術を掲載するポートフォリオを作成しました。
 
 ## 🚀 Project Structure
 
