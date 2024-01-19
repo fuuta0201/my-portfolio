@@ -1,0 +1,103 @@
+---
+import { info } from "@data";
+
+import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
+import MetaHead from "@components/general/MetaHead.astro";
+import Layout from "@layouts/Layout.astro";
+
+const python = {
+  title: '機械学習体験ページ',
+  description: 'pythonライブラリ「scikit-learn」を用いた機械学習の一連の作業例を体験できます',
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <MetaHead
+      title={"機械学習体験ページ"}
+      description={"scikit-learnを用いた機械学習の流れを体験します。"}
+      ogImageUrl={"/assets/images/profile.png"}
+    />
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+      - numpy
+      - matplotlib
+      - scikit-learn
+      - pandas
+    </py-env>
+  </head>
+
+  <body>
+    <Layout>
+      <h1 style="line-height: 1.2;">{python.title}</h1>
+      <p>{python.description}</p>
+      <p class="block mb-5">本ページでは、scikit-learnのirisデータセットを用いたクラス分類を行います</p>
+      <div>
+        <ul>
+          <li class="mb-5">
+            <h3 class="mb-2 font-bold">データセットの中身</h3>
+            <p id="data-content"></p>
+          </li>
+          <li class="mb-5">
+            <h3 class="mb-2">正解ラベル</h3>
+            <p id="data-label"></p>
+          </li>
+          <li class="mb-5">
+            <h3 class="mb-2 font-bold">訓練データとテストデータに分割</h3>
+            <p>
+              X_train, X_test, y_train, y_test = train_test_split(data['data'], data['target'], random_state=0)
+            </p>
+          </li>
+          <li class="mb-5">
+            <h3 class="mb-2 font-bold">k-最近傍法で学習</h3>
+            <p class="mb-2">k-最近傍法でモデルを学習します。</p>
+            <p class="mb-2">knn = KNeighborsClassifier(n_neighbors=1)</p>
+          </li>
+          <li class="mb-5">
+            <button class="bg-gray-200 rounded flex justify-center items-center p-2" id="pred-button">
+              <span>予測する</span>
+            </button>
+            <script>
+              const button = document.getElementById('pred-button');
+              const predElement = document.getElementById('data-score');
+              button.addEventListener('click', () => {
+                predElement.style.display = 'block';
+              });
+            </script>
+          </li>
+          <li class="mb-5">
+            <h3 class="mb-2 font-bold">予測スコア</h3>
+            <p class="hidden" id="data-score"></p>
+          </li>
+        </ul>
+      </div>
+      <py-script>
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+
+data = datasets.load_iris()
+content = document.getElementById('data-content')
+content.innerHTML = str(data.keys())
+
+label = document.getElementById('data-label')
+label.innerHTML = str(data['target_names'])
+
+X_train, X_test, y_train, y_test = train_test_split(
+    data['data'], data['target'], random_state=0)
+
+knn = KNeighborsClassifier(n_neighbors=1)
+
+knn.fit(X_train, y_train)
+score = knn.score(X_test, y_test)
+outscore = document.getElementById('data-score')
+outscore.innerHTML = str(score)
+
+      </py-script>
+    </Layout>
+  </body>
+</html>
