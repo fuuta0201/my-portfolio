@@ -2,11 +2,19 @@ export const info = {
   //baseUrl: "https://astro-portfolio-uzair.vercel.app",
   name: "佐藤楓太",
   jobDescription: "フロントエンドエンジニア",
-  about: `高専に在学し、来年度からは専攻科に進学します。研究では生体信号と機械学習を用いたデータ解析を行い、Nuxt.js、Astro.js、WordPress、MicroCMSなどを
+  about: `私は現在高専に在学し、来年度からは専攻科に進学します。研究では生体信号と機械学習を用いたデータ解析を行い、Nuxt.js、Astro.js、WordPress、MicroCMSなどを
     用いたフロントエンドエンジニアとしても仕事をしています。本ページではAstro.jsのThemeを用いてポートフォリオを作成しました。
   `,
 
   experience: [
+    {
+      name: "高専での研究",
+      startDate: "2022年10月",
+      endDate: "現在",
+      description: [
+        "- 生体信号と機械学習を用いた緊張度判別システムの開発",
+      ],
+    },
     {
       name: "アルバイトとしてのフロントエンド開発",
       startDate: "2023年2月",
@@ -19,7 +27,7 @@ export const info = {
     },
 
     {
-      name: "個人的開発事例",
+      name: "個人の開発事例",
       startDate: "2023年10月",
       endDate: "現在",
       description: [
@@ -56,8 +64,20 @@ export const info = {
       description: "自動車屋のホームページを作成しました。使用技術はNuxt3とMicroCMSです。",
       tech: [
         "Nuxt3",
+        "pug",
+        "scss",
         "MicroCMS",
         "Netlify",
+      ],
+    },
+    {
+      title: "機械学習体験ページ",
+      isFeatured: true,
+      thumbnail: "/assets/images/scatter.png",
+      url: "/python/",
+      description: "Pythonを用いた機械学習体験ページを作成しました。",
+      tech: [
+        "Python",
       ],
     },
   ],

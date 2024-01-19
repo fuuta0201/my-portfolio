@@ -3,6 +3,16 @@
 ## Overview
 
 成果物や習得技術を掲載するポートフォリオを作成しました。
+このリポジトリはフィックスターズ様への提出用となります。
+実際にサイトを確認する場合にはリポジトリをクローン後、以下を実行してください。
+※ node.js version: v19.5.0
+
+```
+npm install
+npm run dev
+```
+
+URL: http://localhost:3000/
 
 ## 🚀 Project Structure
 
